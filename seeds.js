@@ -22,32 +22,32 @@ var data = [
 
 function seedDB(){
         Campground.remove({}, function(err){
-        if(err){
-            console.log(err);
-        } else{
-            console.log("Campgrounds removed");
-            data.forEach(function(seed){
-               Campground.create(seed, function(err, campground){
-                   if(err){
-                       console.log(err);
-                   } else {
-                       console.log("Campground created");
-                       Comment.create({
-                           text:"Beautiful place, I wish there would be wifi",
-                           author:"Homer"
-                       }, function(err, comment){
-                           if(err){
-                               console.log(err);
-                           } else{
-                               campground.comments.push(comment);
-                               campground.save();
-                               console.log("comment created");
-                           }
-                       });
-                   }
-               }) 
-            });
-        }
+        // if(err){
+        //     console.log(err);
+        // } else{
+        //     console.log("Campgrounds removed");
+        //     data.forEach(function(seed){
+        //       Campground.create(seed, function(err, campground){
+        //           if(err){
+        //               console.log(err);
+        //           } else {
+        //               console.log("Campground created");
+        //               Comment.create({
+        //                   text:"Beautiful place, I wish there would be wifi",
+        //                   author:"Homer"
+        //               }, function(err, comment){
+        //                   if(err){
+        //                       console.log(err);
+        //                   } else{
+        //                       campground.comments.push(comment);
+        //                       campground.save();
+        //                       console.log("comment created");
+        //                   }
+        //               });
+        //           }
+        //       }) 
+        //     });
+        // }
     });
 }
 
