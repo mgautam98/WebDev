@@ -9,3 +9,8 @@
 .delete{
     display: inline;
 }
+
+.copyright{
+    padding: 50px;
+    text-align: center;
+}
